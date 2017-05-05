@@ -1,0 +1,12 @@
+- Nombre del proyecto: The Media Finder
+- Objetivos, descripción y funcionalidad del proyecto: Aplicación que usa la API de The Movie Database y la API de Youtube para mostrar información sobre series y peliculas. Con la API de The Movie Database obtengo el titulo y sinopsis, mientras que con la API de Youtube obtengo videos sobre la pelicula o serie.
+- URL del repositorio GItHub: https://github.com/FranciscoRomero23/appheroku
+- URL de la página web: https://pruebafjrm.herokuapp.com/
+- ¿Cuántas API web vas a usar en el proyecto?: 2
+URL de la API utilizada(s): The Movie Database (https://api.themoviedb.org/3/), Youtube (https://www.youtube.com/iframe_api)
+- Lenguaje(s) de marcas que utiliza(n) la(s) API: json
+- ¿Qué tipo de autentificación tiene(n) la(s) API utilizada(s)?: API key
+- ¿Qué métodos vas a usar en las llamada a la API?, es decir, ¿vas a consumir información del servicio web (métodos GET)?, o también, ¿vas a interactuar con el servicio web (métodos POST, PUT, DELETE,…)?: solo GET
+- ¿Cuantas cosas hace la aplicación?, podemos pensar cuantos @route va a tener nuestro programa bottle: 5 (Películas en cines, Buscador por titulo, Buscador por genero, Buscador por actor, Buscador de vídeos)
+- ¿Vas a hacer una página web válida y con hoja de estilo?: Si
+- Comenta cualquier cosa que crees que puedes hacerte conseguir un 10 en el proyecto:
