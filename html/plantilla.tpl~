@@ -10,12 +10,12 @@
 <header>
    <h1>The Media Finder</h1>
 </header>
- 
-<a class="boton_personalizado" href="#">Cartelera</a>
+ <nav><a class="boton_personalizado" href="#">Cartelera</a>
 <a class="boton_personalizado" href="#">Busqueda: Titulo</a>
 <a class="boton_personalizado" href="#">Busqueda: Genero</a>
 <a class="boton_personalizado" href="#">Busqueda: Actor</a>
-<a class="boton_personalizado" href="#">Busqueda: Videos</a>
+<a class="boton_personalizado" href="#">Busqueda: Videos</a></nav>
+
 
 <article>
   <h1>Cartelera</h1>
