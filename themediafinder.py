@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from bottle import route, run,static_file
+from sys import argv
 
 @route("/inicio")
 @route('/')
