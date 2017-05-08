@@ -2,7 +2,7 @@
 <html lang="es">
 <html>
 <head>
-<link href="static/style.css" rel="stylesheet" />
+<link href="style.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 
 <article>
   <h1>El buscador</h1>
-  <p>Bienvenido a The Media Finder, una aplicaci&oacute;n web en la que podrás buscar informaci&oacute;n sobre pel&iacute;culas y series de tv.</p>
+  <p>Bienvenido a The Media Finder, una aplicaci&oacute;n web en la que podr&aacute;s buscar informaci&oacute;n sobre pel&iacute;culas y series de tv.</p>
   <p>Puedes ver las pel&iacute;culas que hay en cartelera en este momento, buscar informaci&oacute;n sobre pel&iacute;culas o series de tv (buscando 
   por titulo, genero o actor) y puedes buscar v&iacute;deos sobre la pel&iacute;cula o serie que te interesa ver.</p>
   <p>Esta aplicaci&oacute;n usa las APIs de The Movie Database y Youtube.</p>
