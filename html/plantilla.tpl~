@@ -2,7 +2,7 @@
 <html lang="es">
 <html>
 <head>
-<link href="style.css" rel="stylesheet" />
+<link href="/style/style.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 <header>
    <h1>The Media Finder</h1>
 </header>
- <nav><a class="boton_personalizado" href="#">Cartelera</a>
+ <nav><a class="boton_personalizado" href="/cartelera">Cartelera</a>
 <a class="boton_personalizado" href="#">Titulos</a>
 <a class="boton_personalizado" href="#">Generos</a>
 <a class="boton_personalizado" href="#">Actores</a>

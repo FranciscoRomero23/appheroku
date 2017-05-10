@@ -2,12 +2,18 @@
   font-family: "Ampera";
   src: url("Ampera.ttf");
 }
-html,body {
-      height:100%;
-      width:100%;
-      background: url("images/fondo.jpg");
+
+html {
+        background: url("images/fondo.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 }
 
+
+URL del artículo: http://www.ejemplode.com/18-css/502-ejemplo_de_fondo_fijo_en_css.html
+Nota completa: Ejemplo de Fondo fijo en CSS
 div.container {
     border: 0px solid;
 }
@@ -24,11 +30,14 @@ header {
 }
 
 footer {
-    padding: 1em;
+    padding: 0em;
     color: white;
     clear: left;
     text-align: center;
-    height:40px;
+    height:80px;
+    color: black;
+    font: 25px Ampera;
+    letter-spacing: -1px;
 }
 
 nav{
@@ -58,7 +67,6 @@ article {
     margin-right: 200px;
     border-left: 0px solid black;
     padding: 1em;
-    height:500px;
     overflow: hidden;
     text-align: justify;
     
@@ -72,18 +80,20 @@ article h1 {
 
 article p {
     color: black;
-    font: 30px times;
+    font: 35px times;
     letter-spacing: -1px;
+    text-align: justify;
 }
 
 .boton_personalizado{
    text-decoration: none;
-   padding: 25px;
-   font-weight: 90px;
-   background-color: yellow;
-   border-radius: 4px;
+   padding: 50px;
+   font-weight: 120px;
+   background-color: #F8B311;
+   border-radius: 6px;
    border: 5px solid orange;
    color: black;
-   font: 40px Ampera;
+   font: 45px Ampera;
 }
+
 

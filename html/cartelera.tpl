@@ -22,16 +22,28 @@
 
 
 <article>
-  <h1>El buscador</h1>
-  <p>Bienvenido a The Media Finder, una aplicaci&oacute;n web en la que podr&aacute;s buscar informaci&oacute;n sobre pel&iacute;culas y series de tv.</p>
-  <p>Puedes ver las pel&iacute;culas que hay en cartelera en este momento, buscar informaci&oacute;n sobre pel&iacute;culas o series de tv (buscando 
-  por titulo, genero o actor) y puedes buscar v&iacute;deos sobre la pel&iacute;cula o serie que te interesa ver.</p>
-  <p>Esta aplicaci&oacute;n usa las APIs de The Movie Database y Youtube.</p>
+<h1>Cartelera</h1>
+<table style="width:100%">
+	% for i in js["results"]:
+	<tr>
+    <th>   
+    	<h2>{{i["title"]}}</h2>
+   	<h3>{{i["release_date"]}}</h3>
+   	<p>Sinopsis: {{i["overview"]}}</p>
+    </th>
+    <th><img src="https://image.tmdb.org/t/p/w500{{i["poster_path"]}}"></th> 
+   </tr>
+</table> 
+	%end
 </article>
 
 <footer>Copyright &copy; Francisco Romero</footer>
 
 </div>
-
+ 
 </body>
 </html>
+
+
+
+
