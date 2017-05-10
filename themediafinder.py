@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 from bottle import route, run, request, template, static_file, redirect
 from sys import argv
+import requests
+import json
 
 @route('/')
 def inicio():
-    return template('static/plantilla.tpl')
+    return template('html/plantilla.tpl')
 
-@route('/static/<filepath:path>')
+@route('/style/<filepath:path>')
 def server_static(filepath):
-    return static_file(filepath, root='static')
+    return static_file(filepath, root='html/style')
 
-run(host='0.0.0.0', port=8081)
+#run(host='0.0.0.0', port=8081)
+run(host='0.0.0.0',port=argv[1])

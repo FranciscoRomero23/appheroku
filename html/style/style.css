@@ -5,7 +5,7 @@
 html,body {
       height:100%;
       width:100%;
-      background: url(fondo.jpg);
+      background: url("images/fondo.jpg");
 }
 
 div.container {
