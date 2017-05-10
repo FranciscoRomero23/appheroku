@@ -23,11 +23,17 @@
 
 <article>
 <h1>Cartelera</h1>
+<table style="width:100%">
 	% for i in js["results"]:
-   <h2>{{i["title"]}}</h2>
-   <h3>{{i["release_date"]}}</h3>
-   <p>Sinopsis: {{i["overview"]}}</p>
-   <img src="https://image.tmdb.org/t/p/w500{{i["poster_path"]}}">
+	<tr>
+    <th>   
+    	<h2>{{i["title"]}}</h2>
+   	<h3>{{i["release_date"]}}</h3>
+   	<p>Sinopsis: {{i["overview"]}}</p>
+    </th>
+    <th><img src="https://image.tmdb.org/t/p/w500{{i["poster_path"]}}"></th> 
+   </tr>
+</table> 
 	%end
 </article>
 
@@ -38,6 +44,6 @@
 </body>
 </html>
 
-<table border="0">
 
-</table> 
+
+
