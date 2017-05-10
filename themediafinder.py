@@ -10,7 +10,7 @@ def inicio():
     
 @route('/cartelera') 
 def cartelera():
-	payload={"query":busqueda,"api_key":os.environ["key_tmdb"],"language":"es-ES"}
+payload={"query":busqueda,"api_key":os.environ["key_tmdb"],"language":"es-ES"}
 	r = requests.get("https://api.themoviedb.org/3/movie/now_playing",params=payload)
 	if r.status_code == 200:
 		js=json.loads(r.text)
