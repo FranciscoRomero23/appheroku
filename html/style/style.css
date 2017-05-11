@@ -66,7 +66,7 @@ article {
     margin-left: 200px;
     margin-right: 200px;
     border-left: 0px solid black;
-    padding: 1em;
+    padding: 3em;
     overflow: hidden;
     text-align: justify;
     
@@ -74,7 +74,13 @@ article {
 
 article h1 {
     color: black;
-    font: 40px Ampera;
+    font: 45px Ampera;
+    letter-spacing: -1px;
+}
+
+article h2 {
+    color: black;
+    font: 35px Ampera;
     letter-spacing: -1px;
 }
 
@@ -96,4 +102,16 @@ article p {
    font: 45px Ampera;
 }
 
-
+img {
+height: 350px;
+display:block;
+margin:auto;
+}
+table {
+    border-spacing: 5px;
+    border: #FFBF00 10px solid
+}
+th, td {
+    padding: 15px;
+    border-color: #FACC2E;
+}

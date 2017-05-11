@@ -23,18 +23,20 @@
 
 <article>
 <h1>Cartelera</h1>
-<table style="width:100%">
+<table border=1 color=FACC2E>
 	% for i in js["results"]:
-	<tr>
-    <th>   
-    	<h2>{{i["title"]}}</h2>
-   	<h3>{{i["release_date"]}}</h3>
-   	<p>Sinopsis: {{i["overview"]}}</p>
-    </th>
-    <th><img src="https://image.tmdb.org/t/p/w500{{i["poster_path"]}}"></th> 
-   </tr>
-</table> 
+	<tr>		
+    		<th>   
+    			<h1>{{i["title"]}}</h1>
+   			Fecha de estreno: {{i["release_date"]}}
+   			<p>{{i["overview"]}}</p>
+    		</th>
+    		<th>
+			<img src="https://image.tmdb.org/t/p/w500{{i["poster_path"]}}">
+		</th> 
+	</tr>
 	%end
+</table> 
 </article>
 
 <footer>Copyright &copy; Francisco Romero</footer>
