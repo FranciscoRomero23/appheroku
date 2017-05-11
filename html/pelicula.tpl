@@ -14,15 +14,15 @@
 <nav>
 <a class="boton_personalizado" href="/">Inicio</a>
 <a class="boton_personalizado" href="/cartelera">Cartelera</a>
-<a class="boton_personalizado" href="/titulo">Titulos</a>
-<a class="boton_personalizado" href="/genero">Generos</a>
-<a class="boton_personalizado" href="/actor">Actores</a>
-<a class="boton_personalizado" href="/videos">Videos</a>
+<a class="boton_personalizado" href="/tipo">Titulos</a>
+<a class="boton_personalizado" href="#">Generos</a>
+<a class="boton_personalizado" href="#">Actores</a>
+<a class="boton_personalizado" href="#">Videos</a>
 </nav>
 
 
 <article>
-<h1>Cartelera</h1>
+<h1>Peliculas que contienen 'Potter'</h1>
 <table border=1 color=FACC2E>
 	% for i in js["results"]:
 	<tr>		
