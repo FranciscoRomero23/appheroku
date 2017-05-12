@@ -22,7 +22,7 @@
 
 
 <article>
-<h1>Peliculas que contienen {{palabra}}</h1>
+<h1>Peliculas que contienen {{palabra2}}</h1>
 <table border=1 color=FACC2E>
 	% for i in js["results"]:
 	<tr>		

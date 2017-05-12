@@ -2,7 +2,7 @@
 <html lang="es">
 <html>
 <head>
-<link href="/style/style2.css" rel="stylesheet" />
+<link href="/style/style3.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 
 
 <article>
-<h1>Series que contienen 'Doctor'</h1>
+<h1>Peliculas que contienen 'Potter'</h1>
 <table border=1 color=FACC2E>
 	% for i in js["results"]:
 	<tr>		

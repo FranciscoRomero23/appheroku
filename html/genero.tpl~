@@ -2,7 +2,7 @@
 <html lang="es">
 <html>
 <head>
-<link href="/style/style3.css" rel="stylesheet" />
+<link href="/style/style4.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -24,8 +24,14 @@
 <article>
 <h1>Búsqueda por titulo</h1>
 <form id="formulario" action="titulo" method="post">
-<h2>Titulo o palabra clave:</h2>
-<input type="text" name="title"/>
+<h2>Genero:</h2>
+<select id="tipo" name="genero">
+ <option value="" selected="seleccion">Buscar por</option>
+ <option value="1">Terror</option>
+ <option value="2">Acción</option>
+ <option value="3">Aventura</option>
+ <option value="4">Ciencia Ficcion</option>
+ </select>
 <h2>Tipo</h2>
 <select id="tipo" name="tipo">
  <option value="" selected="seleccion">Buscar por</option>
@@ -34,7 +40,7 @@
  </select><br><br>
  <input type="submit" name="buscar" value="Buscar" class="buscar" />
 </form>
-<p>En esta pagina de The Media Finder podrás buscar series o películas dependiendo del titulo que tengan. Puedes poner el titulo entero o poner una palabra clave para buscar.</p> 
+<p>En esta pagina de The Media Finder podrás buscar series o películas dependiendo del genero que tengan.</p> 
 </article>
 
 <footer>Copyright &copy; Francisco Romero</footer>

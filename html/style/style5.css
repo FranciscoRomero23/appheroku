@@ -4,7 +4,7 @@
 }
 
 html {
-        background: url("images/fondo.jpg") no-repeat center center fixed;
+        background: url("images/fondo5.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -92,9 +92,9 @@ article p {
    text-decoration: none;
    padding: 50px;
    font-weight: 120px;
-   background-color: #F8B311;
+   background-color: #8270BD;
    border-radius: 6px;
-   border: 5px solid orange;
+   border: 5px solid #A894EA;
    color: black;
    font: 45px Ampera;
 }
@@ -106,9 +106,9 @@ margin:auto;
 }
 table {
     border-spacing: 5px;
-    border: #FFBF00 10px solid
+    border: #8270BD 10px solid
 }
 th, td {
     padding: 15px;
-    border-color: #FACC2E;
+    border-color: #A894EA;
 }

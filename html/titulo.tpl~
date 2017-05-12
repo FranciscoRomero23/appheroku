@@ -22,21 +22,19 @@
 
 
 <article>
-<h1>Series que contienen 'Doctor'</h1>
-<table border=1 color=FACC2E>
-	% for i in js["results"]:
-	<tr>		
-    		<th>   
-    			<h2>{{i["title"]}}</h2>
-   			Fecha de estreno: {{i["release_date"]}}
-   			<p>{{i["overview"]}}</p>
-    		</th>
-    		<th>
-			<img src="https://image.tmdb.org/t/p/w500{{i["poster_path"]}}">
-		</th> 
-	</tr>
-	%end
-</table> 
+<h1>Búsqueda por titulo</h1>
+<form id="formulario" action="titulo" method="post">
+<h2>Titulo o palabra clave:</h2>
+<input type="text" name="title"/>
+<h2>Tipo</h2>
+<select id="tipo" name="tipo">
+ <option value="" selected="seleccion">Buscar por</option>
+ <option value="serie">Serie</option>
+ <option value="pelicula">Pelicula</option>
+ </select><br><br>
+ <input type="submit" name="buscar" value="Buscar" class="buscar" />
+</form>
+<p>En esta pagina de The Media Finder podrás buscar series o películas dependiendo del titulo que tengan. Puedes poner el titulo entero o poner una palabra clave para buscar.</p> 
 </article>
 
 <footer>Copyright &copy; Francisco Romero</footer>

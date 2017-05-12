@@ -22,13 +22,13 @@
 
 
 <article>
-<h1>Series que contienen 'Potter'</h1>
+<h1>Series que contienen 'Doctor'</h1>
 <table border=1 color=FACC2E>
 	% for i in js["results"]:
 	<tr>		
     		<th>   
-    			<h2>{{i["title"]}}</h2>
-   			Fecha de estreno: {{i["release_date"]}}
+    			<h2>{{i["name"]}}</h2>
+   			Fecha de estreno: {{i["first_air_date"]}}
    			<p>{{i["overview"]}}</p>
     		</th>
     		<th>
