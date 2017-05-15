@@ -4,7 +4,7 @@
 }
 
 html {
-        background: url("images/fondo2.jpg") no-repeat center center fixed;
+        background: url("images/fondo.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -35,7 +35,7 @@ footer {
     color: black;
     font: 25px Ampera;
     letter-spacing: -1px;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 nav{
@@ -93,11 +93,22 @@ article p {
    text-decoration: none;
    padding: 50px;
    font-weight: 120px;
-   background-color: #8270BD;
+   background-color: #F8B311;
    border-radius: 6px;
-   border: 5px solid #A894EA;
+   border: 5px solid orange;
    color: black;
    font: 45px Ampera;
+}
+
+.boton_pagina{
+   text-decoration: none;
+   padding: 30px;
+   font-weight: 180px;
+   background-color: #F8B311;
+   border-radius: 6px;
+   border: 5px solid orange;
+   color: black;
+   font: 30px Ampera;
 }
 
 img {
@@ -107,9 +118,9 @@ margin:auto;
 }
 table {
     border-spacing: 5px;
-    border: #8270BD 10px solid
+    border: #FFBF00 10px solid
 }
 th, td {
     padding: 15px;
-    border-color: #A894EA;
+    border-color: #FACC2E;
 }

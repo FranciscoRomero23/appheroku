@@ -2,7 +2,7 @@
 <html lang="es">
 <html>
 <head>
-<link href="/style/style5.css" rel="stylesheet" />
+<link href="/style/style.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 </header>
 <nav>
 <a class="boton_personalizado" href="/">Inicio</a>
-<a class="boton_personalizado" href="/cartelera">Cartelera</a>
+<a class="boton_personalizado" href="/cartelera/1">Cartelera</a>
 <a class="boton_personalizado" href="/titulo">Titulos</a>
 <a class="boton_personalizado" href="/genero">Generos</a>
 <a class="boton_personalizado" href="/actor">Actores</a>
@@ -23,7 +23,7 @@
 
 <article>
 <h1>Búsqueda por actor</h1>
-<form id="formulario" action="titulo" method="post">
+<form id="formulario" action="actor" method="post">
 <h2>Genero:</h2>
 <select id="tipo" name="genero">
  <option value="" selected="seleccion">Buscar por</option>
@@ -40,10 +40,10 @@
  </select><br><br>
  <input type="submit" name="buscar" value="Buscar" class="buscar" />
 </form>
-<p>En esta pagina de The Media Finder podrás buscar series o películas dependiendo del genero que tengan.</p> 
+<p>En esta pagina de The Media Finder podrás buscar series o películas dependiendo del actor que tengan.</p> 
 </article>
 
-<footer>Copyright &copy; Francisco Romero</footer>
+<footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 
 </div>
  

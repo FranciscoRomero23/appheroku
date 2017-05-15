@@ -22,7 +22,7 @@
 
 
 <article>
-<h1>Peliculas de Animación</h1>
+<h1>Peliculas de </h1>
 <table border=0 >
 	% for i in js["results"]:
 	<tr>		
@@ -38,6 +38,11 @@
 	%end
 </table> 
 </article>
+<nav>
+	% for i in range(paginas):
+	<a class="boton_pagina" href="/actor/pelicula/{{i+1}}">{{i+1}}</a>
+	%end
+</nav>
 
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 

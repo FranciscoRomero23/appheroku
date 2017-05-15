@@ -22,13 +22,13 @@
 
 
 <article>
-<h1>Peliculas de Animación</h1>
-<table border=0 >
+<h1>Series</h1>
+<table border=0>
 	% for i in js["results"]:
 	<tr>		
     		<th>   
-    			<h2>{{i["title"]}}</h2>
-   			Fecha de estreno: {{i["release_date"]}}
+    			<h2>{{i["name"]}}</h2>
+   			Fecha de estreno: {{i["first_air_date"]}}
    			<p>{{i["overview"]}}</p>
     		</th>
     		<th>
@@ -38,6 +38,11 @@
 	%end
 </table> 
 </article>
+<nav>
+	% for i in range(paginas):
+	<a class="boton_pagina" href="/actor/serie/{{i+1}}">{{i+1}}</a>
+	%end
+</nav>
 
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 

@@ -24,10 +24,23 @@ header {
     color: black;
     font: 45px Ampera;
     letter-spacing: -1px;
+    border: #FFBF00 10px groove;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    background: rgba(252,234,187,1);
+    background: -moz-linear-gradient(-45deg, rgba(252,234,187,1) 0%, rgba(252,205,77,0.83) 31%, rgba(248,181,0,0.78) 42%, rgba(250,213,112,0.55) 84%, rgba(251,223,147,0.55) 97%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(252,234,187,1)), color-stop(31%, rgba(252,205,77,0.83)), color-stop(42%, rgba(248,181,0,0.78)), color-stop(84%, rgba(250,213,112,0.55)), color-stop(97%, rgba(251,223,147,0.55)));
+    background: -webkit-linear-gradient(-45deg, rgba(252,234,187,1) 0%, rgba(252,205,77,0.83) 31%, rgba(248,181,0,0.78) 42%, rgba(250,213,112,0.55) 84%, rgba(251,223,147,0.55) 97%);
+    background: -o-linear-gradient(-45deg, rgba(252,234,187,1) 0%, rgba(252,205,77,0.83) 31%, rgba(248,181,0,0.78) 42%, rgba(250,213,112,0.55) 84%, rgba(251,223,147,0.55) 97%);
+    background: -ms-linear-gradient(-45deg, rgba(252,234,187,1) 0%, rgba(252,205,77,0.83) 31%, rgba(248,181,0,0.78) 42%, rgba(250,213,112,0.55) 84%, rgba(251,223,147,0.55) 97%);
+    background: linear-gradient(135deg, rgba(252,234,187,1) 0%, rgba(252,205,77,0.83) 31%, rgba(248,181,0,0.78) 42%, rgba(250,213,112,0.55) 84%, rgba(251,223,147,0.55) 97%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=1 );
 }
 
 footer {
-    padding: 0em;
+    padding-top: 50px;
     color: white;
     clear: left;
     text-align: center;
@@ -35,6 +48,11 @@ footer {
     color: black;
     font: 25px Ampera;
     letter-spacing: -1px;
+    margin-top: 50px;
+    border: #FFBF00 10px groove;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 nav{
@@ -66,13 +84,21 @@ article {
     padding: 3em;
     overflow: hidden;
     text-align: justify;
-    
+    border: #FFBF00 10px groove;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 article h1 {
     color: black;
-    font: 45px Ampera;
+    font: 60px Ampera;
     letter-spacing: -1px;
+    text-align: center;
+    text-shadow: 5px 5px 2px orange;
+    text-decoration: underline;
 }
 
 article h2 {
@@ -117,7 +143,6 @@ margin:auto;
 }
 table {
     border-spacing: 5px;
-    border: #FFBF00 10px solid
 }
 th, td {
     padding: 15px;

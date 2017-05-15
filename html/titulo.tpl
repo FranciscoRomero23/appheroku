@@ -2,7 +2,7 @@
 <html lang="es">
 <html>
 <head>
-<link href="/style/style3.css" rel="stylesheet" />
+<link href="/style/style.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 </header>
 <nav>
 <a class="boton_personalizado" href="/">Inicio</a>
-<a class="boton_personalizado" href="/cartelera">Cartelera</a>
+<a class="boton_personalizado" href="/cartelera/1">Cartelera</a>
 <a class="boton_personalizado" href="/titulo">Titulos</a>
 <a class="boton_personalizado" href="/genero">Generos</a>
 <a class="boton_personalizado" href="/actor">Actores</a>
@@ -37,7 +37,7 @@
 <p>En esta pagina de The Media Finder podrás buscar series o películas dependiendo del titulo que tengan. Puedes poner el titulo entero o poner una palabra clave para buscar.</p> 
 </article>
 
-<footer>Copyright &copy; Francisco Romero</footer>
+<footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 
 </div>
  

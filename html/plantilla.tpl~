@@ -13,7 +13,7 @@
 </header>
 <nav>
 <a class="boton_personalizado" href="/">Inicio</a>
-<a class="boton_personalizado" href="/cartelera">Cartelera</a>
+<a class="boton_personalizado" href="/cartelera/1">Cartelera</a>
 <a class="boton_personalizado" href="/titulo">Titulos</a>
 <a class="boton_personalizado" href="/genero">Generos</a>
 <a class="boton_personalizado" href="/actor">Actores</a>
@@ -28,7 +28,7 @@
   por titulo, genero o actor) y puedes buscar v&iacute;deos sobre la pel&iacute;cula o serie que te interesa ver.</p>
   <p>Esta aplicaci&oacute;n usa las APIs de The Movie Database y Youtube.</p>
 </article>
-
+<br><br>
 <footer>Copyright &copy; Francisco Romero</footer>
 
 </div>

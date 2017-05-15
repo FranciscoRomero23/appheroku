@@ -23,7 +23,7 @@
 
 <article>
 <h1>Cartelera</h1>
-<table border=1 color=FACC2E>
+<table border=0>
 	% for i in js["results"]:
 	<tr>		
     		<th>   
@@ -39,14 +39,16 @@
 </table> 
 </article>
 <nav>
-<a class="boton_pagina" href="/cartelera/num">Pagina Anterior</a>   <a class="boton_pagina" href="/cartelera/num">Pagina Siguiente</a>
+	% for i in range(paginas):
+	<a class="boton_pagina" href="/cartelera/{{i+1}}">{{i+1}}</a>
+	%end
 </nav>
 
 
 
 
 
-<footer>Copyright &copy; Francisco Romero</footer>
+<footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 
 </div>
  

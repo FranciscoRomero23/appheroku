@@ -13,7 +13,7 @@
 </header>
 <nav>
 <a class="boton_personalizado" href="/">Inicio</a>
-<a class="boton_personalizado" href="/cartelera">Cartelera</a>
+<a class="boton_personalizado" href="/cartelera/1">Cartelera</a>
 <a class="boton_personalizado" href="/titulo">Titulos</a>
 <a class="boton_personalizado" href="/genero">Generos</a>
 <a class="boton_personalizado" href="/actor">Actores</a>
@@ -23,7 +23,7 @@
 
 <article>
 <h1>Cartelera</h1>
-<table border=1 color=FACC2E>
+<table border=0>
 	% for i in js["results"]:
 	<tr>		
     		<th>   
@@ -48,7 +48,7 @@
 
 
 
-<footer>Copyright &copy; Francisco Romero</footer>
+<footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 
 </div>
  

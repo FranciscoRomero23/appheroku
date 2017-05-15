@@ -29,7 +29,7 @@
   <p>Esta aplicaci&oacute;n usa las APIs de The Movie Database y Youtube.</p>
 </article>
 
-<footer>Copyright &copy; Francisco Romero</footer>
+<footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 
 </div>
 
