@@ -20,6 +20,7 @@ header {
     color: white;
     clear: left;
     text-align: center;
+    text-shadow: 5px 5px 2px orange;
     height:180px;
     color: black;
     font: 45px Ampera;
