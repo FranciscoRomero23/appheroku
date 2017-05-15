@@ -2,7 +2,7 @@
 <html lang="es">
 <html>
 <head>
-<link href="/style/style2.css" rel="stylesheet" />
+<link href="/style/style.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -38,6 +38,15 @@
 	%end
 </table> 
 </article>
+<nav>
+	% for i in range(paginas):
+	<a class="boton_pagina" href="/cartelera/{{i+1}}">{{i+1}}</a>
+	%end
+</nav>
+
+
+
+
 
 <footer>Copyright &copy; Francisco Romero</footer>
 

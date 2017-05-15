@@ -8,13 +8,15 @@ import json
 def inicio():
     return template('html/plantilla.tpl')
     
-@route('/cartelera') 
-def cartelera():
-	payload={"api_key":os.environ["key_tmdb"],"language":"es-ES"}
+@route('/cartelera/<num>') 
+def cartelera(num="1"):
+	payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","page":num}
+	#payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","region":"ES","page":num}
 	r = requests.get("https://api.themoviedb.org/3/movie/now_playing",params=payload)
-#	r = requests.get("https://api.themoviedb.org/3/movie/now_playing?api_key=35bcc7d68551a6d39bc6bef1847e87b5&language=es-ES")
+	#r = requests.get("https://api.themoviedb.org/3/movie/now_playing?api_key=35bcc7d68551a6d39bc6bef1847e87b5&language=es-ES&region=ES")
 	js=json.loads(r.text)
-	return template("html/cartelera.tpl",js=js)
+	total=js["total_pages"]
+        return template("html/cartelera.tpl",js=js,numero=num,paginas=total)
 
 @route('/titulo')
 def titulo():

@@ -13,7 +13,7 @@
 </header>
 <nav>
 <a class="boton_personalizado" href="/">Inicio</a>
-<a class="boton_personalizado" href="/cartelera">Cartelera</a>
+<a class="boton_personalizado" href="/cartelera/1">Cartelera</a>
 <a class="boton_personalizado" href="/titulo">Titulos</a>
 <a class="boton_personalizado" href="/genero">Generos</a>
 <a class="boton_personalizado" href="/actor">Actores</a>

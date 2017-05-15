@@ -2,7 +2,7 @@
 <html lang="es">
 <html>
 <head>
-<link href="/style/style.css" rel="stylesheet" />
+<link href="/style/style3.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -22,13 +22,13 @@
 
 
 <article>
-<h1>Cartelera</h1>
+<h1>Series de Animación</h1>
 <table border=1 color=FACC2E>
 	% for i in js["results"]:
 	<tr>		
     		<th>   
-    			<h2>{{i["title"]}}</h2>
-   			Fecha de estreno: {{i["release_date"]}}
+    			<h2>{{i["name"]}}</h2>
+   			Fecha de estreno: {{i["first_air_date"]}}
    			<p>{{i["overview"]}}</p>
     		</th>
     		<th>
@@ -38,13 +38,6 @@
 	%end
 </table> 
 </article>
-<nav>
-<a class="boton_pagina" href="/cartelera/num">Pagina Anterior</a>   <a class="boton_pagina" href="/cartelera/num">Pagina Siguiente</a>
-</nav>
-
-
-
-
 
 <footer>Copyright &copy; Francisco Romero</footer>
 
