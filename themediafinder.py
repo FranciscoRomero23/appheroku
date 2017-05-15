@@ -3,6 +3,7 @@ from bottle import route, run, request, template, static_file, redirect
 from sys import argv
 import requests
 import json
+import os
 
 @route('/')
 def inicio():
