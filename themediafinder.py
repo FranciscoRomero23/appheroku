@@ -11,7 +11,7 @@ def inicio():
     
 @route('/cartelera/<num>') 
 def cartelera(num="1"):
-	payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","page":num}
+	payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","region":"ES","page":num}
 	#payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","region":"ES","page":num}
 	r = requests.get("https://api.themoviedb.org/3/movie/now_playing",params=payload)
 	#r = requests.get("https://api.themoviedb.org/3/movie/now_playing?api_key=35bcc7d68551a6d39bc6bef1847e87b5&language=es-ES&region=ES")
