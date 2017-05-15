@@ -23,7 +23,7 @@
 
 <article>
 <h1>Búsqueda por genero</h1>
-<form id="formulario" action="titulo" method="post">
+<form id="formulario" action="genero" method="post">
 <h2>Genero:</h2>
 <select id="tipo" name="genero">
  <option value="" selected="seleccion">Buscar por</option>
