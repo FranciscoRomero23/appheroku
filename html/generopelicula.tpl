@@ -3,6 +3,8 @@
 <html>
 <head>
 <link href="/style/style.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="/style/images/favicon.png" />
+<title>Películas de {{nombre}}</title>
 </head>
 <body>
 
@@ -20,9 +22,8 @@
 <a class="boton_personalizado" href="/videos">Videos</a>
 </nav>
 
-
 <article>
-<h1>Peliculas de Animación</h1>
+<h1>Peliculas de {{nombre}}</h1>
 <table border=0 >
 	% for i in js["results"]:
 	<tr>		
@@ -40,7 +41,7 @@
 </article>
 <nav>
 	% for i in range(paginas):
-	<a class="boton_pagina" href="/genero/pelicula/{{i+1}}">{{i+1}}</a>
+	<a class="boton_pagina" href="/genero/pelicula/{{genero}}/{{i+1}}">{{i+1}}</a>
 	%end
 </nav>
 

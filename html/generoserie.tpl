@@ -3,6 +3,8 @@
 <html>
 <head>
 <link href="/style/style.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="/style/images/favicon.png" />
+<title>Series de {{nombre}}</title>
 </head>
 <body>
 
@@ -22,7 +24,7 @@
 
 
 <article>
-<h1>Series de Animación</h1>
+<h1>Series de {{nombre}}</h1>
 <table border=0>
 	% for i in js["results"]:
 	<tr>		
@@ -40,7 +42,7 @@
 </article>
 <nav>
 	% for i in range(paginas):
-	<a class="boton_pagina" href="/genero/serie/{{i+1}}">{{i+1}}</a>
+	<a class="boton_pagina" href="/genero/serie/{{genero}}/{{i+1}}">{{i+1}}</a>
 	%end
 </nav>
 

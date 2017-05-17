@@ -3,6 +3,7 @@
 <html>
 <head>
 <link href="/style/style.css" rel="stylesheet" />
+<title>Inicio</title>
 </head>
 <body>
 
@@ -28,8 +29,8 @@
   por titulo, genero o actor) y puedes buscar v&iacute;deos sobre la pel&iacute;cula o serie que te interesa ver.</p>
   <p>Esta aplicaci&oacute;n usa las APIs de The Movie Database y Youtube.</p>
 </article>
-<br><br>
-<footer>Copyright &copy; Francisco Romero</footer>
+
+<footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 
 </div>
 

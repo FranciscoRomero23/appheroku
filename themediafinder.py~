@@ -16,7 +16,7 @@ def cartelera(num="1"):
 	r = requests.get("https://api.themoviedb.org/3/movie/now_playing",params=payload)
 	js=json.loads(r.text)
 	total=js["total_pages"]
-        return template("html/cartelera.tpl",js=js,numero=num,paginas=total)
+	return template("html/cartelera.tpl",js=js,numero=num,paginas=total)
 
 @route('/titulo')
 def titulo():
@@ -27,27 +27,27 @@ def titulo2():
     para1=str(request.forms.get('title'))
     para2=str(request.forms.get('tipo'))
     if para2 == "serie":
-        redirect("/titulo/serie/1")
+        redirect("/titulo/serie/%s/1"%para1)
     else:
-        redirect("/titulo/pelicula/1")
+        redirect("/titulo/pelicula/%s/1"%para1)
 
-@route('/titulo/serie/<num>') 
-def tituloserie(num="1"):
-	#payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","query":"doctor","page":num}
-	payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","query":"doctor","page":num}
+@route('/titulo/serie/<titulo>/<num>') 
+def tituloserie(titulo,num="1"):
+	#payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","query":titulo,"page":num}
+	payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","query":titulo,"page":num}
 	r = requests.get("https://api.themoviedb.org/3/search/tv",params=payload)
 	js=json.loads(r.text)
 	total=js["total_pages"]
-	return template("html/tituloserie.tpl",js=js,numero=num,paginas=total)
+	return template("html/tituloserie.tpl",js=js,numero=num,paginas=total,titulo=titulo)
 
-@route('/titulo/pelicula/<num>') 
-def titulopelicula(num="1"):
-	#payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","query":"potter","page":num}
-	payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","query":"potter","page":num}
+@route('/titulo/pelicula/<titulo>/<num>') 
+def titulopelicula(titulo,num="1"):
+	#payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","query":titulo,"page":num}
+	payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","query":titulo,"page":num}
 	r = requests.get("https://api.themoviedb.org/3/search/movie",params=payload)
 	js=json.loads(r.text)
 	total=js["total_pages"]
-	return template("html/titulopelicula.tpl",js=js,numero=num,paginas=total)
+	return template("html/titulopelicula.tpl",js=js,numero=num,paginas=total,titulo=titulo)
 
 @route('/genero')
 def genero():
@@ -55,43 +55,61 @@ def genero():
     
 @route('/genero',method="post")
 def genero2():
-    para3=str(request.forms.get('genero'))
-    para4=str(request.forms.get('tipo'))
-    if para4 == "serie":
-        redirect("/genero/serie/1")
+    para3=str(request.forms.get('tipo'))
+    para4=str(request.forms.get('genero'))
+    if para3 == "serie":
+        redirect("/genero/serie/%s/1"%para4)
     else:
-        redirect("/genero/pelicula/1")
+        redirect("/genero/pelicula/%s/1"%para4)
 
-@route('/genero/serie/<num>') 
-def generoserie(num="1"):
-	#payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","with_genres":16,"page":num}
-	payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","with_genres":18,"page":num}
+@route('/genero/serie/<genero>/<num>') 
+def generoserie(genero,num="1"):
+	generonumero=['10759','16','35','80','99','18','10751','10762','9648','10763','10764','10765','10766','10767','10768','37']
+	generonombre=['Acción y Aventura','Animación','Comedia','Crimen','Documental','Drama','Familia','Niños','Misterio','Noticias','Reality','Sci-Fi y Fantasia','Soap','Talk','Guerra y Politica','Western']
+	gen=generonumero.index(genero)	
+	nombre=generonombre[gen]
+	#payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","with_genres":genero,"page":num}
+	payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","with_genres":genero,"page":num}
 	r = requests.get("https://api.themoviedb.org/3/discover/tv",params=payload)
 	js=json.loads(r.text)
 	total=js["total_pages"]
-	return template("html/generoserie.tpl",js=js,numero=num,paginas=total)
 
-@route('/genero/pelicula/<num>') 
-def generopelicula(num="1"):
-	#payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","with_genres":16,"page":num}
-	payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","with_genres":16,"page":num}
+	return template("html/generoserie.tpl",js=js,numero=num,paginas=total,genero=genero,nombre=nombre)
+
+@route('/genero/pelicula/<genero>/<num>') 
+def generopelicula(genero,num="1"):
+	generonumero=['28','12','16','35','80','99','18','10751','10762','14','36','27','10402','9648','10749','878','10770','53','10752','37']
+	generonombre=['Acción','Aventura','Animación','Comedia','Crimen','Documental','Drama','Familia','Fantasía','Historia','Terror','Música','Misterio','Romance','Ciencia ficción','Televisión','Suspense','Guerra','Western']
+	gen=generonumero.index(genero)	
+	nombre=generonombre[gen]
+	#payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","with_genres":genero,"page":num}
+	payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","with_genres":genero,"page":num}
 	r = requests.get("https://api.themoviedb.org/3/discover/movie",params=payload)
 	js=json.loads(r.text)
 	total=js["total_pages"]
-	return template("html/generopelicula.tpl",js=js,numero=num,paginas=total)
+	return template("html/generopelicula.tpl",js=js,numero=num,paginas=total,genero=genero,nombre=nombre)
 
 @route('/actor')
 def actor():
     return template('html/actor.tpl')
-    
+
 @route('/actor',method="post")
 def actor2():
-    para1=str(request.forms.get('genero'))
-    para2=str(request.forms.get('tipo'))
-    if para2 == "serie":
-        redirect("/genero/serie")
+    para3=str(request.forms.get('actor'))
+    para4=str(request.forms.get('tipo'))
+    if para4 == "serie":
+        redirect("/actor/serie/1")
     else:
-        redirect("/genero/pelicula")
+        redirect("/actor/pelicula/1")
+
+@route('/actor/pelicula/<num>')         
+def actorpelicula(num="1"):
+	#payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","with_people":71580,"page":num}
+	payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","with_people":71580,"page":num}
+	r = requests.get("https://api.themoviedb.org/3/discover/movie",params=payload)
+	js=json.loads(r.text)
+	total=js["total_pages"]
+	return template("html/actorpelicula.tpl",js=js,numero=num,paginas=total)
 
 @route('/videos')
 def video():

@@ -3,6 +3,8 @@
 <html>
 <head>
 <link href="/style/style.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="/style/images/favicon.png" />
+<title>Cartelera</title>
 </head>
 <body>
 

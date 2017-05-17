@@ -3,6 +3,8 @@
 <html>
 <head>
 <link href="/style/style.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="/style/images/favicon.png" />
+<title>Películas con '{{titulo}}'</title>
 </head>
 <body>
 
@@ -13,7 +15,7 @@
 </header>
 <nav>
 <a class="boton_personalizado" href="/">Inicio</a>
-<a class="boton_personalizado" href="/cartelera1">Cartelera</a>
+<a class="boton_personalizado" href="/cartelera/1">Cartelera</a>
 <a class="boton_personalizado" href="/titulo">Titulos</a>
 <a class="boton_personalizado" href="/genero">Generos</a>
 <a class="boton_personalizado" href="/actor">Actores</a>
@@ -22,7 +24,7 @@
 
 
 <article>
-<h1>Peliculas que contienen 'Potter'</h1>
+<h1>Peliculas que contienen '{{titulo}}'</h1>
 <table border=0>
 	% for i in js["results"]:
 	<tr>		
@@ -40,7 +42,7 @@
 </article>
 <nav>
 	% for i in range(paginas):
-	<a class="boton_pagina" href="/titulo/pelicula/{{i+1}}">{{i+1}}</a>
+	<a class="boton_pagina" href="/titulo/pelicula/{{titulo}}/{{i+1}}">{{i+1}}</a>
 	%end
 </nav>
 
