@@ -93,36 +93,6 @@ def generopelicula(genero,num="1"):
 def actor():
     return template('html/actor.tpl')
 
-@route('/actor',method="post")
-def actor2():
-    para3=str(request.forms.get('actor'))
-    para4=str(request.forms.get('tipo'))
-	 payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","region":"ES"}
-	 #payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","region":"ES","page":num}
-	 r = requests.get("https://api.themoviedb.org/3/person/popular",params=payload)
-	 js=json.loads(r.text)
-	
-	 for i in js["results"]:
-	 	if para3==i["name"]:
-			return template('html/error.tpl')
-		else:
-			return template('html/plantilla.tpl')
-		#if para3==i["name"] and para4 == "serie":
-		#		redirect("/actor/serie/%s/1"%para3)
-		#elif para3==i["name"] and para4 == "pelicula":
-		#		redirect("/actor/serie/%s/1"%para3)
-		#else:
-		#	   return template('html/error.tpl')
-
-@route('/actor/pelicula/<num>')         
-def actorpelicula(num="1"):
-	payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","with_people":71580,"page":num}
-	#payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","with_people":71580,"page":num}
-	r = requests.get("https://api.themoviedb.org/3/discover/movie",params=payload)
-	js=json.loads(r.text)
-	total=js["total_pages"]
-	return template("html/actorpelicula.tpl",js=js,numero=num,paginas=total)
-
 @route('/videos')
 def video():
     return template('html/video.tpl')
