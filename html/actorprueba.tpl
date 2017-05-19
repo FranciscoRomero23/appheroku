@@ -25,7 +25,7 @@
 
 <article>
 <h1>Búsqueda por actor</h1>
-<h2>El actor que has buscado es {{para3}} y su ID es {{ident}}.</h2>
+<h2>El actor que has buscado es {{para3}} y su ID es {{ident}}.Total={{total}}</h2>
 
 <p>En esta pagina de The Media Finder podrás buscar series o películas dependiendo del titulo que tengan. Puedes poner el titulo entero o poner una palabra clave para buscar.</p> 
 </article>
