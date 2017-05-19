@@ -97,10 +97,25 @@ def actor():
 def actor2():
     para3=str(request.forms.get('actor'))
     para4=str(request.forms.get('tipo'))
-    if para4 == "serie":
+    if :
         redirect("/actor/serie/1")
     else:
         redirect("/actor/pelicula/1")
+
+	payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","region":"ES","page":1}
+	#payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","region":"ES","page":num}
+	r = requests.get("https://api.themoviedb.org/3/person/popular",params=payload)
+	js=json.loads(r.text)
+	total=js["total_pages"]
+	
+	for i in js["results"]:
+		return template('html/error.tpl'
+		#if para3==i["name"] and para4 == "serie":
+		#		redirect("/actor/serie/%s/1"%para3)
+		#elif para3==i["name"] and para4 == "pelicula":
+		#		redirect("/actor/serie/%s/1"%para3)
+		#else:
+		#	   return template('html/error.tpl')
 
 @route('/actor/pelicula/<num>')         
 def actorpelicula(num="1"):
