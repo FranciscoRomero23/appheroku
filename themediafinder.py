@@ -103,7 +103,7 @@ def actor2():
 	js=json.loads(r.text)
 	for i in js:
 		if para3==i["name"]:
-			return template('html/actorprueba.tpl',para3=para3,id=i["id"])
+			return template('html/actorprueba.tpl',para3=para3)
 		else:
 			return template('html/plantilla.tpl')
     
