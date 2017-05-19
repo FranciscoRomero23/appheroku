@@ -101,7 +101,7 @@ def actor2():
 	#payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","region":"ES","page":num}
 	r = requests.get("https://api.themoviedb.org/3/person/popular",params=payload)
 	js=json.loads(r.text)
-	for i in js:
+	for i in js["results"]:
 		if para3==i["name"]:
 			return template('html/actorprueba.tpl',para3=para3)
 		else:

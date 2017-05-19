@@ -93,7 +93,7 @@ def generopelicula(genero,num="1"):
 def actor():
     return template('html/actor.tpl')
 
-@route('/actor')
+@route('/actor',method="post")
 def actor2():
 	para3=str(request.forms.get('actor'))
 	para4=str(request.forms.get('tipo'))
@@ -105,7 +105,7 @@ def actor2():
 		if para3==i["name"]:
 			return template('html/actorprueba.tpl',para3=para3)
 		else:
-			return template('html/plantilla.tpl')
+			return template('html/error.tpl')
     
 
 @route('/videos')
