@@ -101,11 +101,11 @@ def actor2():
 	#payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","region":"ES","page":num}
 	r = requests.get("https://api.themoviedb.org/3/person/popular",params=payload)
 	js=json.loads(r.text)
-	for i in js["results"]:
+	for i in js:
 		if para3==i["name"]:
 			return template('html/error.tpl')
 		else:
-			return template('html/plantilla.tpl')   
+			return template('html/plantilla.tpl')
     
 
 @route('/videos')
