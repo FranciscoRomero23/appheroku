@@ -93,6 +93,21 @@ def generopelicula(genero,num="1"):
 def actor():
     return template('html/actor.tpl')
 
+@route('/actor',method="post")
+def actor2():
+	para3=str(request.forms.get('actor'))
+	para4=str(request.forms.get('tipo'))
+	payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","region":"ES"}
+	#payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","region":"ES","page":num}
+	r = requests.get("https://api.themoviedb.org/3/person/popular",params=payload)
+	js=json.loads(r.text)
+	for i in js["results"]:
+		if para3==i["name"]:
+			return template('html/error.tpl')
+		else:
+			return template('html/plantilla.tpl')   
+    
+
 @route('/videos')
 def video():
     return template('html/video.tpl')
