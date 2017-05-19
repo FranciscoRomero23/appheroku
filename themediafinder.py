@@ -104,7 +104,7 @@ def actor2():
 	
 	 for i in js["results"]:
 	 	if para3==i["name"]:
-			return template('html/error.tpl'
+			return template('html/error.tpl')
 		#if para3==i["name"] and para4 == "serie":
 		#		redirect("/actor/serie/%s/1"%para3)
 		#elif para3==i["name"] and para4 == "pelicula":
