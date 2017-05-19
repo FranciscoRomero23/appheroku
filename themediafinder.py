@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from bottle import route, run, request, template, static_file, redirect
+from bottle import route, run, request, template, static_file, redirect,error
 from sys import argv
 import requests
 import json
@@ -123,6 +123,10 @@ def video2():
         redirect("/genero/serie")
     else:
         redirect("/genero/pelicula")
+
+@error(500)
+def error500(error):
+    return template('html/error.tpl')
 
 @route('/style/<filepath:path>')
 def server_static(filepath):
