@@ -101,7 +101,7 @@ def actor2():
 	#payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","region":"ES","page":num}
 	r = requests.get("https://api.themoviedb.org/3/person/popular",params=payload)
 	js=json.loads(r.text)
-	total=js["total_pages"]
+	total='967'
 	for i in jd["results"]:
 		if para3==i["name"]:
 			ident=i["id"]
