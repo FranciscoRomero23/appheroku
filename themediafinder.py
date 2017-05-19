@@ -96,7 +96,6 @@ def actor():
 @route('/actor',method="post")
 def actor2():
 	para3=str(request.forms.get('actor'))
-	para4=str(request.forms.get('tipo'))
 	for num in range(1,967):
 		payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","region":"ES","page":num}
 		#payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","region":"ES","page":num}
@@ -105,8 +104,16 @@ def actor2():
 		for i in js["results"]:
 			if para3==i["name"]:
 				ident=i["id"]
-				return template('html/actorprueba.tpl',para3=para3,ident=ident)
-    
+				return template('html/actorprueba.tpl',nombre=para3,ident=ident)
+
+@route('/actor/pelicula/<nombre>/<num>') 
+def generoserie(nombre,num="1"):
+	payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","with_people":ident,"page":num}
+	#payload={"api_key":"35bcc7d68551a6d39bc6bef1847e87b5","language":"es-ES","with_genres":genero,"page":num}
+	r = requests.get("https://api.themoviedb.org/3/discover/movie",params=payload)
+	js=json.loads(r.text)
+	total=js["total_pages"]
+	return template("html/actorpelicula.tpl",js=js,numero=num,paginas=total,genero=genero,nombre=nombre)
 
 @route('/videos')
 def video():
