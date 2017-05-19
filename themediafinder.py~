@@ -105,7 +105,7 @@ def actor2():
 		for num in js["results"]:
 			if para3==i["name"]:
 				ident=i["id"]
-				return template('html/actorprueba.tpl',para3=para3,ident=ident,total=total)
+				return template('html/actorprueba.tpl',para3=para3,ident=ident)
     
 
 @route('/videos')
