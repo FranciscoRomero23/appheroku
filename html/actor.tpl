@@ -25,10 +25,29 @@
 
 <article>
 <h1>Búsqueda por actor</h1>
+<table border=0>
+<form id="formulario" action="actor" method="post">
+<tr>		
+<td>  
+<h2>Titulo o palabra clave:</h2>
+<input type="text" name="actor"/>
+</td>
+<td>
+<h2>Tipo</h2><select id="tipo" name="tipo">
+<option value="" selected="seleccion">Buscar por</option>
+<option value="serie">Serie</option>
+<option value="pelicula">Pelicula</option>
+</select>
+</td>
+<tr>
+<td COLSPAN=2>
+ <input type="submit" name="buscar" value="Buscar" class="buscar" />
+</td> 
+</tr>
+</form>
+</table>
 
-<h2>Actor:</h2>
-
-<p>En esta pagina de The Media Finder podrás buscar películas dependiendo del actor que tengan.</p> 
+<p>En esta pagina de The Media Finder podrás buscar series o películas dependiendo del titulo que tengan. Puedes poner el titulo entero o poner una palabra clave para buscar.</p> 
 </article>
 
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
