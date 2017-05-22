@@ -42,7 +42,7 @@
 </article>
 <nav>
 	% for i in range(paginas):
-	<a href="/actor/pelicula/{{ident}}/{{i+1}}">{{i+1}}</a>
+	<a href="/actor/pelicula/{{ident}}/{{i+1}}"><input type="button" value={{i+1}} name={{i+1}} /></a>
 	%end
 </nav>
 

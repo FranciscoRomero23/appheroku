@@ -47,7 +47,7 @@
 </form>
 </table>
 
-<p>En esta pagina de The Media Finder podrás buscar series o películas dependiendo del titulo que tengan. Puedes poner el titulo entero o poner una palabra clave para buscar.</p> 
+<p>En esta pagina de The Media Finder podrás buscar películas dependiendo del actor. Si te gusta un actor y quieres ver en que peliculas ha actuado, aqui podras verlo. Puedes poner el titulo entero o poner una palabra clave para buscar.</p> 
 </article>
 
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
