@@ -26,11 +26,11 @@
 <article>
 <h1>Búsqueda de videos en Youtube:</h1>
 <table border=0>
-<form id="formulario" action="video" method="post">
+<form id="formulario" action="videoresultado" method="post">
 <tr>		
 <td>  
 <h2>Video:</h2>
-<input type="text" name="video"/>
+<input type="text" name="q"/>
 	<br/><br/>
 <strong><label for='maxResults'>Límite De Resultados</label></strong>
 	<select id='maxResults' name='maxResults'>
