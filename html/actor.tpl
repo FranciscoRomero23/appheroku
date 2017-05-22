@@ -29,7 +29,7 @@
 <form id="formulario" action="actor" method="post">
 <tr>		
 <td>  
-<h2>Titulo o palabra clave:</h2>
+<h2>Nombre:</h2>
 <input type="text" name="actor"/>
 </td>
 <tr>
