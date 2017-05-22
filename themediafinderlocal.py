@@ -120,8 +120,8 @@ def actorpelicula(ident,nombre,num="1"):
 def video():
     return template('html/video.tpl')
     
-@route('/videoresultado',method="post")
-def videoresultado():
+@route('/videoresults',method="post")
+def videoresults():
     maxResults = request.forms.get('maxResults')
     q = request.forms.get('q')
     lista_ids = []
@@ -136,7 +136,7 @@ def videoresultado():
             lista_ids.append(video["id"]["videoId"])
         for video2 in busquedavideo["items"]:
             titulos_videos.append(video2["snippet"]["title"])
-        return template("html/videoresultado.tpl",q=q,lista_ids=lista_ids,titulos_videos=titulos_videos)
+        return template("html/videoresults.tpl",q=q,lista_ids=lista_ids,titulos_videos=titulos_videos)
     else:
         return template("html/error.tpl")
 
