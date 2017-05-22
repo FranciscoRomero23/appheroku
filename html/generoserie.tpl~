@@ -3,7 +3,7 @@
 <html>
 <head>
 <link href="/style/style.css" rel="stylesheet" />
-	<link rel="icon" type="image/png" href="Imagenes/favicon.png" />
+<link rel="icon" type="image/png" href="/style/images/favicon.png" />
 <title>Series de {{nombre}}</title>
 </head>
 <body>
