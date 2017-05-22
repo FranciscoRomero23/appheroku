@@ -41,14 +41,14 @@
 </table> 
 </article>
 <nav>
-	Actualmente en la página: {{i}} de {{paginas}}
-	%if i=="1":
-		<a href="/cartelera/{{i+1}}"><input style="background-color: #FF9900" type="button" value={{i+1}} name="Página siguiente" /></a>
-	%elif i==paginas:
-		<a href="/cartelera/{{i-1}}"><input style="background-color: #FF9900" type="button" value={{i-1}} name="Página anterior" /></a>
+	Actualmente en la página: {{numero}} de {{paginas}}
+	%if numero=="1":
+		<a href="/cartelera/{{numero+1}}"><input style="background-color: #FF9900" type="button" value={{numero+1}} name="Página siguiente" /></a>
+	%elif numero==paginas:
+		<a href="/cartelera/{{numero-1}}"><input style="background-color: #FF9900" type="button" value={{numero-1}} name="Página anterior" /></a>
 	%else:
-		<a href="/cartelera/{{i-1}}"><input style="background-color: #FF9900" type="button" value={{i-1}} name="Página anterior" /></a>
-		<a href="/cartelera/{{i+1}}"><input style="background-color: #FF9900" type="button" value={{i+1}} name="Página siguiente" /></a>
+		<a href="/cartelera/{{numero-1}}"><input style="background-color: #FF9900" type="button" value={{numero-1}} name="Página anterior" /></a>
+		<a href="/cartelera/{{numero+1}}"><input style="background-color: #FF9900" type="button" value={{numero+1}} name="Página siguiente" /></a>
 	%end
 
 </nav>
