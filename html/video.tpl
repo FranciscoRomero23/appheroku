@@ -26,11 +26,28 @@
 <article>
 <h1>Búsqueda de videos en Youtube:</h1>
 <table border=0>
-<form id="formulario" action="actor" method="post">
+<form id="formulario" action="video" method="post">
 <tr>		
 <td>  
 <h2>Video:</h2>
-<input type="text" name="actor"/>
+<input type="text" name="video"/>
+	<br/><br/>
+<strong><label for='maxResults'>Límite De Resultados</label></strong>
+	<select id='maxResults' name='maxResults'>
+		<option value="" selected="selected">-	Selecciona   -</option>										
+		<option value="5">5 resultados</option>
+		<option value="10">10 resultados</option>
+		<option value="15">15 resultados</option>
+		<option value="20">20 resultados</option>
+	</select>
+	<br/><br/>
+<strong><label for='order'>Orden De Resultados</label></strong>
+	<select id='order' name='order'>
+		<option value="" selected="selected">-	Selecciona   -</option>										
+		<option value='date'>Fecha</option>
+		<option value='relevance'>Relevancia</option>
+    	<option value='viewCount'>Conteo De Visitas</option>
+	</select>
 </td>
 <tr>
 <td COLSPAN=2>
