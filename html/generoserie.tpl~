@@ -47,7 +47,7 @@
 	<p>Actualmente en la página: {{numero}} de {{paginas}}</p>
 	</th>
 	<th WIDTH="400">
-	%if paginas>"1":
+	%if paginas>=int(1):
 	%	if int(numero)==int(paginas):
 	%		Anterior=int(numero)-int(1)
 			<a href="/genero/serie/{{genero}}/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
