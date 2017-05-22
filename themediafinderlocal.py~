@@ -121,9 +121,9 @@ def video():
     return template('html/video.tpl')
     
 @route('/videoresultado',method="post")
-def video2():
+def videoresultado():
     maxResults = request.forms.get('maxResults')
-    q = request.forms.get('video')
+    q = request.forms.get('q')
     lista_ids = []
     titulos_videos = []
     keyvideo = os.environ["key_youtube"]
