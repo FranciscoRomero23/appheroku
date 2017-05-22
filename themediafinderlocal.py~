@@ -120,14 +120,25 @@ def actorpelicula(ident,nombre,num="1"):
 def video():
     return template('html/video.tpl')
     
-@route('/videos',method="post")
+@route('/videoresultado',method="post")
 def video2():
-    para1=str(request.forms.get('genero'))
-    para2=str(request.forms.get('tipo'))
-    if para2 == "serie":
-        redirect("/genero/serie")
+    maxResults = request.forms.get('maxResults')
+    q = request.forms.get('video')
+    lista_ids = []
+    titulos_videos = []
+    keyvideo = os.environ["key_youtube"]
+    payload2 = {"part":"snippet","ForMine":"true","maxResults":maxResults,"q":q,"type":"video","key":keyvideo}
+    r2 = requests.get('https://www.googleapis.com/youtube/v3/search?',params=payload2)
+    videos = r2.text
+    busquedavideo = json.loads(videos)
+    if r2.status_code == 200:
+        for video in busquedavideo["items"]:
+            lista_ids.append(video["id"]["videoId"])
+        for video2 in busquedavideo["items"]:
+            titulos_videos.append(video2["snippet"]["title"])
+        return template("videoresults.tpl",q=q,lista_ids=lista_ids,titulos_videos=titulos_videos)
     else:
-        redirect("/genero/pelicula")
+        return template("error.tpl")
 
 @error(500)
 def error500(error):

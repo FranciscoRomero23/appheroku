@@ -24,7 +24,7 @@
 
 
 <article>
-<h1>Videos que contienen '{{video}}'</h1>
+<h1>Videos que contienen '{{q}}'</h1>
 %for id,video in zip(lista_ids,titulos_videos):
 	<ul>
 		<li><h2><strong>{{video}}</strong></h2></li>

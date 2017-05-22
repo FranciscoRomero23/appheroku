@@ -4,7 +4,7 @@
 <head>
 <link href="/style/style.css" rel="stylesheet" />
 <link rel="icon" type="image/png" href="/style/images/favicon.png" />
-<title>Series con '{{titulo}}'</title>
+<title>Videos con '{{video}}'</title>
 </head>
 <body>
 
@@ -24,21 +24,13 @@
 
 
 <article>
-<h1>Series que contienen '{{titulo}}'</h1>
-<table border=0>
-	% for i in js["results"]:
-	<tr>		
-    		<th>   
-    			<h2>{{i["name"]}}</h2>
-   			Fecha de estreno: {{i["first_air_date"]}}
-   			<p>{{i["overview"]}}</p>
-    		</th>
-    		<th>
-			<img src="https://image.tmdb.org/t/p/w500{{i["poster_path"]}}">
-		</th> 
-	</tr>
-	%end
-</table> 
+<h1>Videos que contienen '{{video}}'</h1>
+%for id,video in zip(lista_ids,titulos_videos):
+	<ul>
+		<li><h2><strong>{{video}}</strong></h2></li>
+		<li><iframe width="600" height="400" src="https://www.youtube.com/embed/{{id}}" frameborder="0" allowfullscreen></iframe></li> 
+	</ul>
+%end
 </article>
 <nav>
 <table border=0>
