@@ -41,9 +41,27 @@
 </table> 
 </article>
 <nav>
-	% for i in range(paginas):
-	<a href="/titulo/pelicula/{{titulo}}/{{i+1}}"><input style="background-color: #FF9900" type="button" value={{i+1}} name={{i+1}} /></a>
+<table border=0>
+<tr>		
+   <th WIDTH="400"> 
+	<p>Actualmente en la página: {{numero}} de {{paginas}}</p>
+	</th>
+	<th WIDTH="400"> 
+	%if int(numero)==int(paginas):
+	%	Anterior=int(numero)-int(1)
+		<a href="/titulo/pelicula/{{titulo}}/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
+	%elif numero=="1":
+	%	Siguiente=int(numero)+int(1)
+		<a href="/titulo/pelicula/{{titulo}}/{{Siguiente}}"><input style="background-color: #FF9900" type="button" value=">" name=">" /></a>
+	%else:
+	%	Siguiente=int(numero)+int(1)
+	%	Anterior=int(numero)-int(1)
+		<a href="/titulo/pelicula/{{titulo}}/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
+		<a href="/titulo/pelicula/{{titulo}}/{{Siguiente}}"><input style="background-color: #FF9900" type="button" value=">" name=">" /></a>
 	%end
+	</th>
+	</tr>
+</table>
 </nav>
 
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
