@@ -101,7 +101,7 @@ def actor2():
 				nombre=i["name"]
 				redirect("/actor/pelicula/%s/%s/1"%(ide,nombre))
 
-@route('/actor/pelicula/<ident>/<nombre>/<num>') 
+@route('/actor/pelicula/<ident>/<num>') 
 def actorpelicula(ident,nombre,num="1"):
 	payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","with_people":ident,"page":num}
 	r = requests.get("https://api.themoviedb.org/3/discover/movie",params=payload)
