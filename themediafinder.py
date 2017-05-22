@@ -109,7 +109,7 @@ def actorpelicula(ident,nombre,num="1"):
 	total=js["total_pages"]
 	return template("html/actorpelicula.tpl",js=js,numero=num,paginas=total,ident=ident,nombre=nombre)
 	
-@route('/videos',method="get"
+@route('/videos',method="get")
 def video():
     return template('html/video.tpl')
     
