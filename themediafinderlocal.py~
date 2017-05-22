@@ -136,9 +136,9 @@ def video2():
             lista_ids.append(video["id"]["videoId"])
         for video2 in busquedavideo["items"]:
             titulos_videos.append(video2["snippet"]["title"])
-        return template("videoresults.tpl",q=q,lista_ids=lista_ids,titulos_videos=titulos_videos)
+        return template("html/videoresults.tpl",q=q,lista_ids=lista_ids,titulos_videos=titulos_videos)
     else:
-        return template("error.tpl")
+        return template("html/error.tpl")
 
 @error(500)
 def error500(error):
