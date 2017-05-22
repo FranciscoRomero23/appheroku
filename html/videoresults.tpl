@@ -13,6 +13,14 @@
 <header>
    <h1>The Media Finder</h1>
 </header>
+<nav>
+<a class="boton_personalizado" href="/">Inicio</a>
+<a class="boton_personalizado" href="/cartelera/1">Cartelera</a>
+<a class="boton_personalizado" href="/titulo">Titulos</a>
+<a class="boton_personalizado" href="/genero">Generos</a>
+<a class="boton_personalizado" href="/actor">Actores</a>
+<a class="boton_personalizado" href="/videos">Videos</a>
+</nav>
 <article>
 <h1>Videos sobre '{{q}}':</h1>
 <table border=0>
