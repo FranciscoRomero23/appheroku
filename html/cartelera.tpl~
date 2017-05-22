@@ -43,12 +43,12 @@
 <nav>
 	Actualmente en la página: {{numero}} de {{paginas}}
 	%if numero=="1":
-		<a href="/cartelera/{{numero+1}}"><input style="background-color: #FF9900" type="button" value={{numero+1}} name="Página siguiente" /></a>
-	%elif numero==paginas:
-		<a href="/cartelera/{{numero-1}}"><input style="background-color: #FF9900" type="button" value={{numero-1}} name="Página anterior" /></a>
+		<a href="/cartelera/{{numero+1}}"><input style="background-color: #FF9900" type="button" value="Página siguiente" name="Página siguiente" /></a>
+	%elif numero=paginas:
+		<a href="/cartelera/{{numero-1}}"><input style="background-color: #FF9900" type="button" value="Página anterior" name="Página anterior" /></a>
 	%else:
-		<a href="/cartelera/{{numero-1}}"><input style="background-color: #FF9900" type="button" value={{numero-1}} name="Página anterior" /></a>
-		<a href="/cartelera/{{numero+1}}"><input style="background-color: #FF9900" type="button" value={{numero+1}} name="Página siguiente" /></a>
+		<a href="/cartelera/{{numero-1}}"><input style="background-color: #FF9900" type="button" value="Página anterior" name="Página anterior" /></a>
+		<a href="/cartelera/{{numero+1}}"><input style="background-color: #FF9900" type="button" value="Página siguiente" name="Página siguiente" /></a>
 	%end
 
 </nav>
