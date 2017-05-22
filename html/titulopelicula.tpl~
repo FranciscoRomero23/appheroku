@@ -46,8 +46,10 @@
    <th WIDTH="400"> 
 	<p>Actualmente en la página: {{numero}} de {{paginas}}</p>
 	</th>
-	<th WIDTH="400"> 
-	%if int(numero)==int(paginas):
+	<th WIDTH="400">
+	%if int(numero)=="1" and int(paginas)=="1":
+	 
+	%elif int(numero)==int(paginas):
 	%	Anterior=int(numero)-int(1)
 		<a href="/titulo/pelicula/{{titulo}}/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
 	%elif numero=="1":
