@@ -21,6 +21,7 @@
     	<th>  
 		<h2>{{video}}</h2></li>
 		</th>
+<tr></tr>
     	<th>
 		<iframe width="600" height="400" src="https://www.youtube.com/embed/{{id}}" frameborder="0" allowfullscreen></iframe></li> 
 		</th> 
