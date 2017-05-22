@@ -56,12 +56,35 @@ footer {
     margin-right: 25px;
 }
 
+a:link   
+{   
+ text-decoration:none;   
+}  
+
 nav{
             height: auto; /*Junto a overflow: hidden; aplicará a nuestro elemento nav el mismo alto que el más alto de sus elementos hijos */ 
             margin: 0 auto; /* Centro el contenedor */
             overflow: hidden;
             text-align: center;
             width: auto; /* Defino el ancho de mi página */
+}
+
+nav p{
+            height: auto; /*Junto a overflow: hidden; aplicará a nuestro elemento nav el mismo alto que el más alto de sus elementos hijos */ 
+            margin: 0 auto; /* Centro el contenedor */
+            overflow: hidden;
+            text-align: center;
+            width: auto; /* Defino el ancho de mi página */
+            font: 30px;
+}
+
+nav input{
+            height: auto; /*Junto a overflow: hidden; aplicará a nuestro elemento nav el mismo alto que el más alto de sus elementos hijos */ 
+            margin: 0 auto; /* Centro el contenedor */
+            overflow: hidden;
+            text-align: center;
+            width: auto; /* Defino el ancho de mi página */
+            font: 30px Ampera;
 }
 
 ul{

@@ -4,7 +4,7 @@
 <head>
 <link href="/style/style.css" rel="stylesheet" />
 <link rel="icon" type="image/png" href="/style/images/favicon.png" />
-<title>Peliculas de {{ident}}</title>
+<title>Peliculas de {{nombre}}</title>
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 
 <article>
-<h1>Peliculas de {{ident}}</h1>
+<h1>Peliculas de {{nombre}}</h1>
 <table border=0 >
 	% for i in js["results"]:
 	<tr>		
@@ -41,9 +41,27 @@
 </table> 
 </article>
 <nav>
-	% for i in range(paginas):
-	<a href="/actor/pelicula/{{ident}}/{{i+1}}"><input style="background-color: #FF9900" type="button" value={{i+1}} name={{i+1}} /></a>
+<table border=0>
+<tr>		
+   <th WIDTH="400"> 
+	<p>Actualmente en la página: {{numero}} de {{paginas}}</p>
+	</th>
+	<th WIDTH="400"> 
+	%if int(numero)==int(paginas):
+	%	Anterior=int(numero)-int(1)
+		<a href="/actor/pelicula/{{ident}}/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
+	%elif numero=="1":
+	%	Siguiente=int(numero)+int(1)
+		<a href="/actor/pelicula/{{ident}}/{{Siguiente}}"><input style="background-color: #FF9900" type="button" value=">" name=">" /></a>
+	%else:
+	%	Siguiente=int(numero)+int(1)
+	%	Anterior=int(numero)-int(1)
+		<a href="/actor/pelicula/{{ident}}/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
+		<a href="/actor/pelicula/{{ident}}/{{Siguiente}}"><input style="background-color: #FF9900" type="button" value=">" name=">" /></a>
 	%end
+	</th>
+	</tr>
+</table>
 </nav>
 
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>

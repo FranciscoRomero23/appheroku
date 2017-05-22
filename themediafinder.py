@@ -99,15 +99,15 @@ def actor2():
 			if para3==i["name"]:
 				ide=i["id"]
 				nombre=i["name"]
-				redirect("/actor/pelicula/%s/1"%ide)
+				redirect("/actor/pelicula/%s/%s/1"%(ide,nombre))
 
 @route('/actor/pelicula/<ident>/<num>') 
-def actorpelicula(ident,num="1"):
+def actorpelicula(ident,nombre,num="1"):
 	payload={"api_key":os.environ["key_tmdb"],"language":"es-ES","with_people":ident,"page":num}
 	r = requests.get("https://api.themoviedb.org/3/discover/movie",params=payload)
 	js=json.loads(r.text)
 	total=js["total_pages"]
-	return template("html/actorpelicula.tpl",js=js,numero=num,paginas=total,ident=ident)
+	return template("html/actorpelicula.tpl",js=js,numero=num,paginas=total,ident=ident,nombre=nombre)
 	
 @route('/videos')
 def video():

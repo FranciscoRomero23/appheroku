@@ -41,16 +41,27 @@
 </table> 
 </article>
 <nav>
-	Actualmente en la página: {{numero}} de {{paginas}}
-	%if numero=="1":
-		<a href="/cartelera/{{numero+1}}"><input style="background-color: #FF9900" type="button" value="Página siguiente" name="Página siguiente" /></a>
-	%elif numero=paginas:
-		<a href="/cartelera/{{numero-1}}"><input style="background-color: #FF9900" type="button" value="Página anterior" name="Página anterior" /></a>
+<table border=0>
+<tr>		
+   <th WIDTH="400"> 
+	<p>Actualmente en la página: {{numero}} de {{paginas}}</p>
+	</th>
+	<th WIDTH="400"> 
+	%if int(numero)==int(paginas):
+	%	Anterior=int(numero)-int(1)
+		<a href="/cartelera/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
+	%elif numero=="1":
+	%	Siguiente=int(numero)+int(1)
+		<a href="/cartelera/{{Siguiente}}"><input style="background-color: #FF9900" type="button" value=">" name=">" /></a>
 	%else:
-		<a href="/cartelera/{{numero-1}}"><input style="background-color: #FF9900" type="button" value="Página anterior" name="Página anterior" /></a>
-		<a href="/cartelera/{{numero+1}}"><input style="background-color: #FF9900" type="button" value="Página siguiente" name="Página siguiente" /></a>
+	%	Siguiente=int(numero)+int(1)
+	%	Anterior=int(numero)-int(1)
+		<a href="/cartelera/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
+		<a href="/cartelera/{{Siguiente}}"><input style="background-color: #FF9900" type="button" value=">" name=">" /></a>
 	%end
-
+	</th>
+	</tr>
+</table>
 </nav>
 
 
