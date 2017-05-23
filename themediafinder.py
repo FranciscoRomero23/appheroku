@@ -211,7 +211,7 @@ def twittear(valorado):
                        resource_owner_secret=TOKENS["access_token_secret"])
       url = 'https://api.twitter.com/1.1/statuses/update.json'
       para1=str(request.forms.get('gustado'))
-		para2=str(request.forms.get('nota'))
+		para2=request.forms.get('nota')
       status = para1,valorado,'y le pongo un',para2
       r = requests.post(url=url,data={"status":status},auth=oauth)
       		
