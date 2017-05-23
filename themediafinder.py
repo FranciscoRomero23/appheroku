@@ -195,7 +195,7 @@ def twitter_logout():
   response.set_cookie("access_token_secret", '',max_age=0)
   redirect('/')
   
-@get('/twittear/<valorado>')
+@get('/twittear/<valorado>',method="post")
 def twittear(valorado):
     if request.get_cookie("access_token", secret='some-secret-key'):
       TOKENS["access_token"]=request.get_cookie("access_token", secret='some-secret-key')
@@ -210,7 +210,8 @@ def twittear(valorado):
                        resource_owner_key=TOKENS["access_token"],
                        resource_owner_secret=TOKENS["access_token_secret"])
       url = 'https://api.twitter.com/1.1/statuses/update.json'
-      	
+      
+		para1=str(request.forms.get('gustado'))	
       r = requests.post(url=url,data={"status":"Me ha gustado la pelicula"},auth=oauth)
       		
       if r.status_code == 200:
