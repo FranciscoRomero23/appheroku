@@ -197,8 +197,6 @@ def twitter_logout():
   
 @get('/twittear/<valorado>')
 def twittear(valorado):
-	para1=str(request.forms.get('gustado'))
-	para2=str(request.forms.get('nota'))
     if request.get_cookie("access_token", secret='some-secret-key'):
       TOKENS["access_token"]=request.get_cookie("access_token", secret='some-secret-key')
       TOKENS["access_token_secret"]=request.get_cookie("access_token_secret", secret='some-secret-key')
@@ -212,6 +210,8 @@ def twittear(valorado):
                        resource_owner_key=TOKENS["access_token"],
                        resource_owner_secret=TOKENS["access_token_secret"])
       url = 'https://api.twitter.com/1.1/statuses/update.json'
+      para1=str(request.forms.get('gustado'))
+		para2=str(request.forms.get('nota'))
       status = para1,valorado,'y le pongo un',para2
       r = requests.post(url=url,data={"status":status},auth=oauth)
       		
