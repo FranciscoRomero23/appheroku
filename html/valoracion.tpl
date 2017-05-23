@@ -33,8 +33,8 @@
 <td>
 	<select id="gustado" name="gustado">
 	 	<option value="" selected="seleccion">Valora</option>
-		<option value="si">Si</option>
-		<option value="no">No</option>
+		<option value="Me ha gustado">Si</option>
+		<option value="No me ha gustado">No</option>
 	</select>
 </td>
 <tr>
@@ -60,7 +60,7 @@
 </form>
 </table>
 <center>
-	<a href="/twittear/{{valorado}}"><h3>Compartir en Twitter</h3></a>
+	<a href="/twittear/{{valorado}}/{{gustado}}/{{nota}}"><h3>Compartir en Twitter</h3></a>
 </center>
 </article>
 
