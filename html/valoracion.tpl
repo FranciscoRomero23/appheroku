@@ -61,7 +61,7 @@
 </form>
 </table>
 <center>
-	<a href="/twittear/{{valorado}}"><h3>Compartir en Twitter</h3></a>
+	<a href="/twittear/{{valorado}}/{{nota}}"><h3>Compartir en Twitter</h3></a>
 </center>
 </article>
 
