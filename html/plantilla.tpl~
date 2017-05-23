@@ -30,7 +30,13 @@
   por titulo, genero o actor) y puedes buscar v&iacute;deos sobre la pel&iacute;cula o serie que te interesa ver.</p>
   <p>Esta aplicaci&oacute;n usa las APIs de The Movie Database y Youtube.</p>
 </article>
-
+% if cont == 1:
+	<h3>Conectado con</h3>
+	<img src="style/images/twitter.png" />
+		<a href="/twitter_logout"><h3>Desconectar</h3></a>
+% else:
+	<a href="{{authorize_url}}"><h3>Conectar con Twitter</h3></a>
+% end
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 
 </div>
