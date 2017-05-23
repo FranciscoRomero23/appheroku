@@ -176,6 +176,10 @@ def videoresultado():
     else:
         return template("html/error.tpl")
 
+@route('/valoracion/<valorado>')
+def valoracion(valorado):
+    return template('html/valoracion.tpl',valorado=valorado)
+
 @get('/callback')
 def get_verifier():
     print TOKENS
@@ -216,9 +220,7 @@ def twittear(valorado):
     else:
       redirect('/')
      
-@route('/valoracion/<valorado>')
-def valoracion(valorado):
-    return template('html/valoracion.tpl',valorado=valorado)
+
     
 @error(500)
 def error500(error):
