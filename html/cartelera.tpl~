@@ -30,7 +30,8 @@
 	<tr>		
     		<th>   
     			<h2>{{i["title"]}}</h2>
-     			Fecha de estreno: {{i["release_date"]}} &nbsp&nbsp&nbsp&nbsp <a href="/valoracion/{{i["title"]}}"><input style="background-color: #FF9900;font-family: times;font-size: 20px" type="button" value="¡Valora!" name="¡Valora!" /></a>
+     			Fecha de estreno: {{i["release_date"]}} &nbsp&nbsp&nbsp&nbsp 
+     			<a href="/valoracion/{{i["title"]}}"><input style="background-color: #FF9900;font-family: times;font-size: 20px" type="button" value="¡Valora!" name="¡Valora!" /></a>
    			<p>{{i["overview"]}}</p>
     		</th>
     		<th>
