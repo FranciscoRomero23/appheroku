@@ -182,6 +182,6 @@ display:center;
 margin:auto;
 }
 th, td {
-    padding: 15px;
+    padding: 0px;
     border-color: #FACC2E;
 }
