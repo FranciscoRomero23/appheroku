@@ -28,13 +28,14 @@
   <p>Bienvenido a The Media Finder, una aplicaci&oacute;n web en la que podr&aacute;s buscar informaci&oacute;n sobre pel&iacute;culas y series de tv.</p>
   <p>Puedes ver las pel&iacute;culas que hay en cartelera en este momento, buscar informaci&oacute;n sobre pel&iacute;culas o series de tv (buscando 
   por titulo, genero o actor) y puedes buscar v&iacute;deos sobre la pel&iacute;cula o serie que te interesa ver.</p>
-  <p>Además podras conectarte a Twitter y tuitear las peliculas y series que más te gusten.</p>
-  <p>Esta aplicaci&oacute;n usa las APIs de The Movie Database y Youtube.</p>
+  <p>Además podrás conectarte a Twitter y tuitear las películas y series que más te gusten.</p>
+  <p>Esta aplicaci&oacute;n usa las APIs de The Movie Database, Twitter y Youtube.</p>
 </article>
 % if cont == 1:
 	<center>
 	<h3>Conectado a Twitter</h3>
 	<img src="style/images/twitter.png" style="height:70px">
+	
 	<a href="/twitter_logout"><h3>Desconectar</h3></a>
 	</center>
 % else:
