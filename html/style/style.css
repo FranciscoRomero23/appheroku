@@ -159,6 +159,17 @@ article p {
    font: 45px Ampera;
 }
 
+.boton_twitter{
+   text-decoration: none;
+   padding: 10px;
+   font-weight: 60px;
+   background-color: #F8B311;
+   border-radius: 6px;
+   border: 5px solid orange;
+   color: black;
+   font: 45px Ampera;
+}
+
 .boton_pagina{
    text-decoration: none;
    padding: 30px;
