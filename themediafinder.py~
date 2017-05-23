@@ -209,9 +209,7 @@ def twittear(valorado):
                        resource_owner_key=TOKENS["access_token"],
                        resource_owner_secret=TOKENS["access_token_secret"])
       url = 'https://api.twitter.com/1.1/statuses/update.json'
-      r = requests.post(url=url,
-                          data={"status":"Me ha gustado la pelicula",
-                          auth=oauth)
+      r = requests.post(url=url,data={"status":"Me ha gustado la pelicula",auth=oauth)
       if r.status_code == 200:
         return """<h2>Tweet Enviado Corrrectamente</h2>"""
       else:
