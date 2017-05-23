@@ -26,6 +26,7 @@
 <article>
 <h1>Valoración</h1>
 <table border=0>
+<form id="formulario" action="twittear" method="post">
 <tr>		
 <td>
 	<p>¿Te ha gustado {{valorado}}?</p>
@@ -60,7 +61,7 @@
 </form>
 </table>
 <center>
-	<a href="/twittear/{{valorado}}/{{gustado}}/{{nota}}"><h3>Compartir en Twitter</h3></a>
+	<a href="/twittear/{{valorado}}/"><h3>Compartir en Twitter</h3></a>
 </center>
 </article>
 
