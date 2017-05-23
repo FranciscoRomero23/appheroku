@@ -35,7 +35,9 @@
 	<img src="style/images/twitter.png" />
 		<a href="/twitter_logout"><h3>Desconectar</h3></a>
 % else:
-	<a href="{{authorize_url}}"><h3>Conectar con Twitter</h3></a>
+	<center>
+	<a href="{{authorize_url}}"><h3>¡Conectate a Twitter!</h3></a>
+	</center>
 % end
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 
