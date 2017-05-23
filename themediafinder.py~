@@ -176,17 +176,8 @@ def videoresultado():
     else:
         return template("html/error.tpl")
 
-@route('/valoracion/<valorado>')
-def valoracion(valorado):
-    return template('html/valoracion.tpl',valorado=valorado)
-
-@route('/valoracion/<valorado>',method="post")
-def valoracion2():
-	para=str(request.forms.get('nota'))
-	redirect("/genero/serie/%s/1"%para4)
-	
-@get('/twittear/<valorado>/<nota>')
-def twittear(valorado,nota):
+@get('/twittear/<valorado>')
+def twittear(valorado):
     if request.get_cookie("access_token", secret='some-secret-key'):
       TOKENS["access_token"]=request.get_cookie("access_token", secret='some-secret-key')
       TOKENS["access_token_secret"]=request.get_cookie("access_token_secret", secret='some-secret-key')
@@ -199,7 +190,7 @@ def twittear(valorado,nota):
                        resource_owner_key=TOKENS["access_token"],
                        resource_owner_secret=TOKENS["access_token_secret"])
       url = 'https://api.twitter.com/1.1/statuses/update.json'
-      status = 'Me ha gustado %s y le pongo un %s. via themediafinder.herokuapp.com'%(valorado,nota)
+      status = 'Me ha gustado %s. via themediafinder.herokuapp.com'%valorado
       r = requests.post(url=url,data={"status":status},auth=oauth)
       if r.status_code == 200:
         return """<h2>Tweet Enviado Corrrectamente</h2>"""
