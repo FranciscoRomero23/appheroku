@@ -60,9 +60,7 @@
 </form>
 </table>
 <center>
-% if cont == 1:
 	<a href="/twittear/{{valorado}}"><h3>Compartir en Twitter</h3></a>
-% end
 </center>
 </article>
 
