@@ -197,25 +197,27 @@ def twitter_logout():
   
 @get('/twittear/<valorado>')
 def twittear(valorado):
-	if request.get_cookie("access_token", secret='some-secret-key'):
-		TOKENS["access_token"]=request.get_cookie("access_token", secret='some-secret-key')
-		TOKENS["access_token_secret"]=request.get_cookie("access_token_secret", secret='some-secret-key')
-		print CONSUMER_KEY
-		print CONSUMER_SECRET
-		print TOKENS["access_token"]
-		print TOKENS["access_token_secret"]
-		
-		oauth = OAuth1(CONSUMER_KEY,client_secret=CONSUMER_SECRET,resource_owner_key=TOKENS["access_token"],resource_owner_secret=TOKENS["access_token_secret"])
-		url = 'https://api.twitter.com/1.1/statuses/update.json'
-      
-      r = requests.post(url=url,data={"status":valorado},auth=oauth)
-      		
+    if request.get_cookie("access_token", secret='some-secret-key'):
+      TOKENS["access_token"]=request.get_cookie("access_token", secret='some-secret-key')
+      TOKENS["access_token_secret"]=request.get_cookie("access_token_secret", secret='some-secret-key')
+      print CONSUMER_KEY
+      print CONSUMER_SECRET
+      print TOKENS["access_token"]
+      print TOKENS["access_token_secret"]
+      oauth = OAuth1(CONSUMER_KEY,
+                       client_secret=CONSUMER_SECRET,
+                       resource_owner_key=TOKENS["access_token"],
+                       resource_owner_secret=TOKENS["access_token_secret"])
+      url = 'https://api.twitter.com/1.1/statuses/update.json'
+      r = requests.post(url=url,
+                          data={"status":"Me ha gustado la pelicula",
+                          auth=oauth)
       if r.status_code == 200:
-      	return """<h2>Tweet Enviado Corrrectamente</h2>"""
+        return """<h2>Tweet Enviado Corrrectamente</h2>"""
       else:
-      	return """<h2>Tu Tweet no fue enviado algo pasó</h2>"""
-	else:
-		redirect('/')
+        return """<h2>Tu Tweet no fue enviado algo pasó</h2>"""
+    else:
+      redirect('/')
      
 
     
