@@ -204,16 +204,18 @@ def twittear(valorado):
       print CONSUMER_SECRET
       print TOKENS["access_token"]
       print TOKENS["access_token_secret"]
-      para1=str(request.forms.get('gustado'))
+
       oauth = OAuth1(CONSUMER_KEY,
                        client_secret=CONSUMER_SECRET,
                        resource_owner_key=TOKENS["access_token"],
                        resource_owner_secret=TOKENS["access_token_secret"])
       url = 'https://api.twitter.com/1.1/statuses/update.json'
-      if para1=="si":
-     		STATUS="Me ha gustado la pelicula"
+      para1=str(request.forms.get('gustado'))
+		if para1=="si":
+			STATUS = 'Me ha gustado la pelicula'
 		else:
-      	STATUS="No me ha gustado la pelicula"
+      	STATUS = 'No me ha gustado la pelicula'
+      	
       r = requests.post(url=url,data={"status":STATUS},auth=oauth)
       		
       if r.status_code == 200:
