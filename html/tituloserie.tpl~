@@ -4,7 +4,7 @@
 <head>
 <link href="/style/style.css" rel="stylesheet" />
 <link rel="icon" type="image/png" href="/style/images/favicon.png" />
-<title>Peliculas de {{nombre}}</title>
+<title>Series con '{{titulo}}'</title>
 </head>
 <body>
 
@@ -24,14 +24,13 @@
 
 
 <article>
-<h1>Peliculas de {{nombre}}</h1>
-<table border=0 >
+<h1>Series que contienen '{{titulo}}'</h1>
+<table border=0>
 	% for i in js["results"]:
 	<tr>		
     		<th>   
-    			<h2>{{i["title"]}}</h2>
-   			Fecha de estreno: {{i["release_date"]}} &nbsp&nbsp&nbsp&nbsp 
-     			<a href="/twittear/{{i["title"]}}"><input style="background-color: #FF9900;font-family: times;font-size: 20px" type="button" value="¡Me gusta!" name="¡Me gusta!" /></a>
+    			<h2>{{i["name"]}}</h2>
+   			Fecha de estreno: {{i["first_air_date"]}}
    			<p>{{i["overview"]}}</p>
     		</th>
     		<th>
@@ -51,20 +50,21 @@
 	%if paginas>int(1):
 	%	if int(numero)==int(paginas):
 	%		Anterior=int(numero)-int(1)
-			<a href="/actor/pelicula/{{ident}}/{{nombre}}/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
+			<a href="/titulo/serie/{{titulo}}/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
 	%	elif numero=="1":
 	%		Siguiente=int(numero)+int(1)
-			<a href="/actor/pelicula/{{ident}}/{{nombre}}/{{Siguiente}}"><input style="background-color: #FF9900" type="button" value=">" name=">" /></a>
+			<a href="/titulo/serie/{{titulo}}/{{Siguiente}}"><input style="background-color: #FF9900" type="button" value=">" name=">" /></a>
 	%	else:
 	%		Siguiente=int(numero)+int(1)
 	%		Anterior=int(numero)-int(1)
-			<a href="/actor/pelicula/{{ident}}/{{nombre}}/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
-			<a href="/actor/pelicula/{{ident}}/{{nombre}}/{{Siguiente}}"><input style="background-color: #FF9900" type="button" value=">" name=">" /></a>
+			<a href="/titulo/serie/{{titulo}}/{{Anterior}}"><input style="background-color: #FF9900" type="button" value="<" name="<" /></a>
+			<a href="/titulo/serie/{{titulo}}/{{Siguiente}}"><input style="background-color: #FF9900" type="button" value=">" name=">" /></a>
 	%end
 	</th>
 	</tr>
 </table>
 </nav>
+
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
 
 </div>
