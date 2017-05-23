@@ -32,7 +32,7 @@
 </article>
 % if cont == 1:
 	<h3>Conectado con</h3>
-	<img src="style/images/twitter.png" />
+	<img src="style/images/twitter.png" style="height:150px">
 		<a href="/twitter_logout"><h3>Desconectar</h3></a>
 % else:
 	<center>
