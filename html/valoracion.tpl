@@ -61,7 +61,7 @@
 </table>
 <center>
 % if cont == 1:
-	<a href="/twittear/{{codigocan}}"><h3 class="centro">Compartir en Twitter</h3></a>
+	<a href="/twittear/{{valorado}}"><h3>Compartir en Twitter</h3></a>
 % end
 </center>
 </article>
