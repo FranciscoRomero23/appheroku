@@ -32,12 +32,12 @@
 </article>
 % if cont == 1:
 	<h3>Conectado con</h3>
-	<img src="style/images/twitter.png" style="height:150px">
+	<img src="style/images/twitter.png" style="height:70px">
 		<a href="/twitter_logout"><h3>Desconectar</h3></a>
 % else:
 	<center>
 	<a class="boton_twitter" href="{{authorize_url}}">¡Conectate a Twitter!</a>
-	<img src="style/images/twitter.png" style="height:150px">
+	<img src="style/images/twitter.png" style="height:70px">
 	</center>
 % end
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>

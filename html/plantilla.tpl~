@@ -37,7 +37,7 @@
 % else:
 	<center>
 	<a class="boton_twitter" href="{{authorize_url}}">¡Conectate a Twitter!</a>
-	<img src="style/images/twitter.png" />
+	<img src="style/images/twitter.png" style="height:150px">
 	</center>
 % end
 <footer>Copyright &copy; Francisco José Romero Morillo, 2017</footer>
