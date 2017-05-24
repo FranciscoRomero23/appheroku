@@ -191,8 +191,8 @@ def twitter_logout():
   response.set_cookie("access_token_secret", '',max_age=0)
   redirect('/')
     
-@get('/twittear/<valorado>')
-def twittear(valorado):
+@get('/twittear/<valorado>/<nota>')
+def twittear(valorado,nota):
     if request.get_cookie("access_token", secret='some-secret-key'):
       TOKENS["access_token"]=request.get_cookie("access_token", secret='some-secret-key')
       TOKENS["access_token_secret"]=request.get_cookie("access_token_secret", secret='some-secret-key')
@@ -205,7 +205,7 @@ def twittear(valorado):
                        resource_owner_key=TOKENS["access_token"],
                        resource_owner_secret=TOKENS["access_token_secret"])
       url = 'https://api.twitter.com/1.1/statuses/update.json'
-      status = 'Me ha gustado %s. via themediafinder.herokuapp.com'%valorado
+      status = 'Me ha gustado %s. via themediafinder.herokuapp.com'%nota
       r = requests.post(url=url,data={"status":status},auth=oauth)
       if r.status_code == 200:
 			return template('html/tuitcorrecto.tpl')

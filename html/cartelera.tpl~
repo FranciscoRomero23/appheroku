@@ -32,6 +32,19 @@
     			<h2>{{i["title"]}}</h2>
      			Fecha de estreno: {{i["release_date"]}} &nbsp&nbsp&nbsp&nbsp 
      			<a href="/twittear/{{i["title"]}}"><input style="background-color: #FF9900;font-family: times;font-size: 20px" type="button" value="¡Me gusta!" name="¡Me gusta!" /></a>
+   				<select id="nota" name="nota">
+	 					<option value="" selected="seleccion">Nota</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
    			<p>{{i["overview"]}}</p>
     		</th>
     		<th>

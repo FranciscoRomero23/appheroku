@@ -31,7 +31,8 @@
     		<th>   
     			<h2>{{i["title"]}}</h2>
      			Fecha de estreno: {{i["release_date"]}} &nbsp&nbsp&nbsp&nbsp 
-     			<a href="/twittear/{{i["title"]}}"><input style="background-color: #FF9900;font-family: times;font-size: 20px" type="button" value="¡Me gusta!" name="¡Me gusta!" /></a>
+     			
+   				<form id="formulario" action="genero" method="post">
    				<select id="nota" name="nota">
 	 					<option value="" selected="seleccion">Nota</option>
 						<option value="1">1</option>
@@ -45,6 +46,9 @@
 						<option value="9">9</option>
 						<option value="10">10</option>
 					</select>
+					</form>
+					
+					<a href="/twittear/{{i["title"]}}/{{nota}}"><input style="background-color: #FF9900;font-family: times;font-size: 20px" type="button" value="¡Me gusta!" name="¡Me gusta!" /></a>
    			<p>{{i["overview"]}}</p>
     		</th>
     		<th>
