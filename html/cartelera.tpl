@@ -32,7 +32,7 @@
     			<h2>{{i["title"]}}</h2>
      			Fecha de estreno: {{i["release_date"]}} &nbsp&nbsp&nbsp&nbsp 
      			
-   				<form id="formulario" action="genero" method="post">
+   				<form id="formulario" action="twittear" method="post">
    				<select id="nota" name="nota">
 	 					<option value="" selected="seleccion">Nota</option>
 						<option value="1">1</option>
