@@ -35,6 +35,7 @@
 	<center>
 	<h3>Conectado a Twitter</h3>
 	<img src="style/images/twitter.png" style="height:70px">
+	
 	<a href="/twitter_logout"><h3>Desconectar</h3></a>
 	</center>
 % else:
