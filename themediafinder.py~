@@ -176,6 +176,21 @@ def videoresultado():
     else:
         return template("html/error.tpl")
 
+@get('/callback')
+def get_verifier():
+    print TOKENS
+    TOKENS["verifier"] = request.query.oauth_verifier
+    get_access_token(TOKENS)
+    response.set_cookie("access_token", TOKENS["access_token"],secret='some-secret-key')
+    response.set_cookie("access_token_secret", TOKENS["access_token_secret"],secret='some-secret-key')
+    redirect('/')
+
+@get('/twitter_logout')
+def twitter_logout():
+  response.set_cookie("access_token", '',max_age=0)
+  response.set_cookie("access_token_secret", '',max_age=0)
+  redirect('/')
+    
 @get('/twittear/<valorado>')
 def twittear(valorado):
     if request.get_cookie("access_token", secret='some-secret-key'):
@@ -199,21 +214,6 @@ def twittear(valorado):
     else:
       redirect('/')
      
-@get('/callback')
-def get_verifier():
-    print TOKENS
-    TOKENS["verifier"] = request.query.oauth_verifier
-    get_access_token(TOKENS)
-    response.set_cookie("access_token", TOKENS["access_token"],secret='some-secret-key')
-    response.set_cookie("access_token_secret", TOKENS["access_token_secret"],secret='some-secret-key')
-    redirect('/')
-
-@get('/twitter_logout')
-def twitter_logout():
-  response.set_cookie("access_token", '',max_age=0)
-  response.set_cookie("access_token_secret", '',max_age=0)
-  redirect('/')
-    
 @error(500)
 def error500(error):
     return template('html/error.tpl')
