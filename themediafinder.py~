@@ -208,9 +208,9 @@ def twittear(valorado):
       status = 'Me ha gustado %s. via themediafinder.herokuapp.com'%valorado
       r = requests.post(url=url,data={"status":status},auth=oauth)
       if r.status_code == 200:
-			return template('html/tuit.tpl')
+			return template('html/tuitcorrecto.tpl')
       else:
-        return """<h2>Tu Tweet no fue enviado algo pasó</h2>"""
+			return template('html/tuiterror.tpl')
     else:
       redirect('/')
      

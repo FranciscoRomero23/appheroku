@@ -163,7 +163,7 @@ def videoresultado():
     lista_ids = []
     titulos_videos = []
     keyvideo = os.environ["key_youtube"]
-    payload2 = {"part":"snippet","ForMine":"true","maxResults":maxResults,"q":q,"type":"video","key":keyvideo}
+    payload2 = {"part":"snippet","ForMine":"true","maxResults":10,"q":q,"type":"video","key":keyvideo}
     r2 = requests.get('https://www.googleapis.com/youtube/v3/search?',params=payload2)
     videos = r2.text
     busquedavideo = json.loads(videos)
