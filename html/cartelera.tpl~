@@ -31,7 +31,7 @@
     		<th>   
     			<h2>{{i["title"]}}</h2>
      			Fecha de estreno: {{i["release_date"]}} &nbsp&nbsp&nbsp&nbsp 
-     			<a href="/twittear/{{i["title"]}}"><input style="background-color: #FF9900;font-family: times;font-size: 20px" type="button" value="¡Me gusta!" name="¡Me gusta!" /></a>
+     			<a href="/twittear/{{i["title"]}}/{{i["poster_path"]}}"><input style="background-color: #FF9900;font-family: times;font-size: 20px" type="button" value="¡Me gusta!" name="¡Me gusta!" /></a>
    			<p>{{i["overview"]}}</p>
     		</th>
     		<th>
