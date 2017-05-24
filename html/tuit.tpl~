@@ -11,8 +11,9 @@
 <div class="container">
 
 <article>
-  <h1>¡¡Error!!</h1>
-  <h2>Has debido elegir una opcion incorrecta, vuelve a la pagina anterior. </h2>
+  <h1>¡Tweet enviado!</h1>
+  <h2>Ya ha sido enviado el tweet con tu opinion. Sigue disfrutando de TheMediaFinder.</h2>
+  			<a href="/"><input style="background-color: #FF9900" type="button" value="Volver a TheMediaFinder" name="Volver a TheMediaFinder" /></a>
 </article>
 
 </div>

@@ -13,7 +13,9 @@
 <article>
   <h1>¡Tweet enviado!</h1>
   <h2>Ya ha sido enviado el tweet con tu opinion. Sigue disfrutando de TheMediaFinder.</h2>
-  			<a href="/"><input style="background-color: #FF9900" type="button" value="Volver a TheMediaFinder" name="Volver a TheMediaFinder" /></a>
+  <nav>
+  <a href="/"><input style="background-color: #FF9900" type="button" value="Volver a TheMediaFinder" name="Volver a TheMediaFinder" /></a>
+  </nav>	
 </article>
 
 </div>
