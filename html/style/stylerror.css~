@@ -64,15 +64,6 @@ nav{
             width: auto; /* Defino el ancho de mi página */
 }
 
-nav input{
-            height: auto; /*Junto a overflow: hidden; aplicará a nuestro elemento nav el mismo alto que el más alto de sus elementos hijos */ 
-            margin: 0 auto; /* Centro el contenedor */
-            overflow: hidden;
-            text-align: center;
-            width: auto; /* Defino el ancho de mi página */
-            font: 30px Ampera;
-}
-
 ul{
             float: left;
             list-style-type: none; /* Elimino los estilos de lista */
